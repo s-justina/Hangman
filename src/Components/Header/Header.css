@@ -1,0 +1,35 @@
+.headerContainer{
+    position: relative;
+    height: 60vh;
+    width: 100%;
+}
+
+div.header{
+    position: absolute;
+    background-image: url('../../assets/center.jpg');
+    height: 60vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .8;
+    overflow: hidden;
+}
+
+.title{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 80%;
+    padding: 5px;
+    transform: translateY(-50%);
+    background: #666;
+    opacity: .7;
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}

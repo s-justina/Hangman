@@ -1,0 +1,52 @@
+/*FONTS:
+font-family: 'Bangers', cursive;
+font-family: 'Acme', sans-serif;*/
+
+.task{
+    margin: 20px auto;
+    font-family: 'Bangers', cursive;
+    font-size: 35px;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sectionContainer{
+    margin:  auto;
+    height: 90vh;
+    width: 90%;
+    background-color: #ddd;
+    overflow: hidden;
+}
+.alphabetPosition{
+    display: flex;
+    margin: 2vh auto;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.letters{
+    margin: 1px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #333;
+    font-family: 'Acme', sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.letters:hover{
+    box-shadow: 2px 2px 2px black;
+    color: #ddd;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.inquiry{
+    margin-top: 3vh;
+    font-family: 'Acme', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
