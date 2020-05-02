@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8a9b732-da43-4eb3-a305-a91957af8212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pool/questions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Section/Section.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Section/Section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Section/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Section/Section.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/section-template" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588175099334</updated>
       <workItem from="1588175101063" duration="13529000" />
-      <workItem from="1588444584813" duration="11398000" />
+      <workItem from="1588444584813" duration="12594000" />
     </task>
     <task id="LOCAL-00001" summary="- Initial project template,&#10;- Create Header,&#10;- Create Section template,&#10;- feature/letter btns">
       <created>1588197424017</created>
@@ -88,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588448344118</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create question and answer box.">
+      <created>1588456286402</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588456286402</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,20 +102,33 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Initial project template,&#10;- Create Header,&#10;- Create Section template,&#10;- feature/letter btns" />
     <MESSAGE value="Finished section template." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished section template." />
+    <MESSAGE value="Create question and answer box." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create question and answer box." />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588176008729">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1588176008729" />
-    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1588456018559">
+    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1588456285950">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1588456018559" />
-    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1588448346240">
+    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1588456285950" />
+    <state x="387" y="90" key="MultipleFileMergeDialog" timestamp="1588457888192">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1588448346240" />
+    <state x="387" y="90" key="MultipleFileMergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1588457888192" />
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1588456288337">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1588456288337" />
+    <state x="448" y="14" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588457883184">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="448" y="14" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.768@0.0.1366.768" timestamp="1588457883184" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1588457926995">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1588457926995" />
   </component>
 </project>
