@@ -51,9 +51,22 @@ font-family: 'Acme', sans-serif;*/
 }
 
 .answer-area{
+    display: flex;
+    position: relative;
+    left: 5%;
+    width: 90%;
+    justify-content: space-around;
     margin-top: 10vh;
     font-size: 40px;
 }
+
+.anonimAnswerStyle{
+    border-bottom: 3px solid #333;
+    height: 40px;
+    width: 40px;
+    color: transparent;
+}
+
 .life-qty{
     margin-top: 10vh;
     font-size: 20px;

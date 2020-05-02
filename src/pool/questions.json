@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "inquiry": "What fruit is it?",
+      "answer":"apple",
+      "clue": "It is green."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer":"orange",
+      "clue": "It is orange."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer":"strawberry",
+      "clue": "It has seeds on its external surface."
+    }
+  ]
+}
