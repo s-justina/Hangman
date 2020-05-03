@@ -4,12 +4,13 @@ import pool from '../../pool/questions';
 
 class Section extends React.Component {
     state = {
+        randomNumber: Math.floor(Math.random()*pool.questions.length),
         dataToPlayGame: {},
+        hiddenClue: true,
     };
     componentDidMount() {
-        const randomNumber = Math.floor(Math.random()*pool.questions.length);
         this.setState({
-            dataToPlayGame: pool.questions[randomNumber]
+            dataToPlayGame: pool.questions[this.state.randomNumber]
         })
     }
     answerArea = ()=>{
@@ -20,7 +21,25 @@ class Section extends React.Component {
         } else {
             return null
         }
-
+    };
+    takeClue = ()=>{
+        return this.state.dataToPlayGame.clue && this.state.dataToPlayGame.clue;
+    };
+    showClue = ()=>{
+        // return <p {this.state.hiddenClue ? {`className='clue hidden'``} : {`className='clue'`} }>Clue: {this.takeClue()}</p>
+        return <p className={this.state.hiddenClue ? 'clue hidden' : 'clue'}>Clue: {this.takeClue()}</p>
+    };
+    handleHint = ()=>{
+        this.setState({
+            hiddenClue: false,
+        })
+    };
+    resetGame = ()=>{
+      this.setState({
+          randomNumber: Math.floor(Math.random()*pool.questions.length),
+          dataToPlayGame: pool.questions[this.state.randomNumber],
+          hiddenClue: true,
+      });
     };
     render() {
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -43,12 +62,12 @@ class Section extends React.Component {
                     <div className='answer-area'>{this.answerArea()}</div>
                     <div className='life-qty'>
                         <p className='text-information'>You have /number/ lives</p>
-                        <p className='clue'>Clue:</p>
+                        {this.showClue()}
                         <div className='draw-information'>Draw</div>
                     </div>
                     <div className='btn-position'>
-                        <button className='btn'>Hint</button>
-                        <button className='btn'>Play again!</button>
+                        <button className='btn' onClick={this.handleHint}>Hint</button>
+                        <button className='btn' onClick={this.resetGame}>Play again!</button>
                     </div>
 
                 </section>
