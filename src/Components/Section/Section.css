@@ -61,11 +61,10 @@ font-family: 'Acme', sans-serif;*/
     font-size: 40px;
 }
 
-.anonimAnswerStyle{
+.answerStyle{
     border-bottom: 3px solid #333;
     height: 40px;
     width: 40px;
-    color: transparent;
 }
 
 .life-qty{

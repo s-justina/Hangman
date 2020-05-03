@@ -4,49 +4,70 @@ import pool from '../../pool/questions';
 
 class Section extends React.Component {
     state = {
-        randomNumber: Math.floor(Math.random()*pool.questions.length),
+        randomNumber: Math.floor(Math.random() * pool.questions.length),
         dataToPlayGame: {},
         hiddenClue: true,
+        lettersFound: [],
     };
+
     componentDidMount() {
         this.setState({
             dataToPlayGame: pool.questions[this.state.randomNumber]
         })
     }
-    answerArea = ()=>{
-        if(this.state.dataToPlayGame.answer){
-            return  this.state.dataToPlayGame.answer.split('').map((letter,index)=>{
-                return <div key={index} className='anonimAnswerStyle'> {letter}</div>
+
+    handleLetterClick = (e) => {
+        const answerSingleLetters = this.state.dataToPlayGame.answer.toUpperCase().split('');
+        let lettersFound = [...this.state.lettersFound];
+        answerSingleLetters.forEach((answerSingleLetter, i) => {
+            if (answerSingleLetter === e.target.innerText) {
+                lettersFound = [...lettersFound, i];
+            } else {}
+        });
+
+        this.setState({
+            lettersFound
+        })
+
+    };
+    answerArea = () => {
+        if (this.state.dataToPlayGame.answer) {
+            console.log(this.state.lettersFound)
+            return this.state.dataToPlayGame.answer.split('').map((letter, index) => {
+                console.log(this.state.lettersFound.includes(index))
+                return <div key={index}
+                            className={!this.state.lettersFound.includes(index) ? 'answerStyle hidden' : 'answerStyle'}> {letter}</div>
             });
         } else {
             return null
         }
     };
-    takeClue = ()=>{
+    takeClue = () => {
         return this.state.dataToPlayGame.clue && this.state.dataToPlayGame.clue;
     };
-    showClue = ()=>{
-        // return <p {this.state.hiddenClue ? {`className='clue hidden'``} : {`className='clue'`} }>Clue: {this.takeClue()}</p>
+    showClue = () => {
         return <p className={this.state.hiddenClue ? 'clue hidden' : 'clue'}>Clue: {this.takeClue()}</p>
     };
-    handleHint = ()=>{
+    handleHint = () => {
         this.setState({
             hiddenClue: false,
         })
     };
-    resetGame = ()=>{
-      this.setState({
-          randomNumber: Math.floor(Math.random()*pool.questions.length),
-          dataToPlayGame: pool.questions[this.state.randomNumber],
-          hiddenClue: true,
-      });
+    resetGame = () => {
+        this.setState({
+            randomNumber: Math.floor(Math.random() * pool.questions.length),
+            dataToPlayGame: pool.questions[this.state.randomNumber],
+            hiddenClue: true,
+            lettersFound: [],
+        });
     };
+
     render() {
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
             'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z'];
         const btnLetters = alphabet.map((letter, index) => {
-            return <div key={index} className='letters'>
+            return <div key={index} className='letters' onClick={this.handleLetterClick}>
                 {letter}
             </div>
         });
