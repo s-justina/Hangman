@@ -1,7 +1,8 @@
 import React from 'react';
 import './Section.css';
 import pool from '../../pool/questions';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import Draw from "../../utils/Draw";
 
 class Section extends React.Component {
     state = {
@@ -11,20 +12,25 @@ class Section extends React.Component {
         lettersFound: [],
         clickedLetter:[],
         totalLive: 10,
+        startPositionToDraw: (0, 0, 400, 400),
     };
 
     componentDidMount() {
         this.setState({
             dataToPlayGame: pool.questions[this.state.randomNumber]
         })
-    }
+    };
 
-    handleLetterClick = (e, clickedButtonIndex) => {
+    handleLetterClick = (e, clickedButtonIndex, disabled) => {
+        if(disabled){
+            return
+        }
         const answerSingleLetters = this.state.dataToPlayGame.answer.toUpperCase().split('');
         let lettersFound = [...this.state.lettersFound];
         let clickedLetter = [...this.state.clickedLetter];
         let isLetterCorrect = false;
         clickedLetter = [...clickedLetter, clickedButtonIndex];
+
         answerSingleLetters.forEach((answerSingleLetter, i) => {
             if (answerSingleLetter === e.target.innerText.toUpperCase()) {
                 lettersFound = [...lettersFound, i];
@@ -32,19 +38,22 @@ class Section extends React.Component {
             }
         });
         if(this.state.totalLive>0 && !isLetterCorrect){
+            Draw.animate(this.state.totalLive);
             this.setState({
                 totalLive: this.state.totalLive-1,
             }, ()=>{
                 if(this.state.totalLive === 0){
-                    Swal.fire({
-                        title: 'GAME OVER!',
-                        showClass: {
-                            popup: 'animated fadeInDown faster'
-                        },
-                        hideClass: {
-                            popup: 'animated fadeOutUp faster'
-                        }
-                    })
+                    setTimeout(()=>{
+                        Swal.fire({
+                            title: 'GAME OVER!',
+                            showClass: {
+                                popup: 'animated fadeInDown faster'
+                            },
+                            hideClass: {
+                                popup: 'animated fadeOutUp faster'
+                            }
+                        })
+                    }, 500)
                 }
             });
         }
@@ -83,6 +92,7 @@ class Section extends React.Component {
             clickedLetter: [],
             totalLive: 10,
         });
+        Draw.resetImage()
     };
 
     render() {
@@ -90,7 +100,9 @@ class Section extends React.Component {
             'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z'];
         const btnLetters = alphabet.map((letter, index) => {
-            return <div key={index} className={this.state.clickedLetter.includes(index)? 'checked-letters': 'letters'} onClick={(e)=>this.handleLetterClick(e,index)}>
+            const buttonAlreadyClicked = this.state.clickedLetter.includes(index);
+            return <div key={index} className={buttonAlreadyClicked ? 'checked-letters': 'letters'}
+                        onClick={(e)=>this.handleLetterClick(e,index,buttonAlreadyClicked   )}>
                 {letter}
             </div>
         });
@@ -107,7 +119,7 @@ class Section extends React.Component {
                     <div className='life-qty'>
                         <p className='text-information'>You have <span className='total-live'> - {this.state.totalLive} - </span> lives</p>
                         {this.showClue()}
-                        <div className='draw-information'>Draw</div>
+                        <div className='draw-information'><canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas></div>
                     </div>
                     <div className='btn-position'>
                         <button className='btn' onClick={this.handleHint}>Hint</button>
