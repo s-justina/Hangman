@@ -1,0 +1,14 @@
+.footer{
+    position: fixed;
+    height: 4vh;
+    width: 100%;
+    bottom: 0;
+    left:0;
+    text-align: center;
+    line-height: 4vh;
+    font-style: italic;
+    font-family: 'Acme', sans-serif;
+    font-size: 15px;
+    background-color: rgba(218,165,32,.7);
+    color: black;
+}
