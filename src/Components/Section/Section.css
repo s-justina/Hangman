@@ -45,6 +45,24 @@ font-family: 'Acme', sans-serif;*/
     cursor: pointer;
 }
 
+.checked-letters{
+    margin: 1px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid darkred;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: darkred;
+    transition: 0.2s;
+}
+
+.checked-letters:hover{
+    box-shadow: 2px 2px 2px black;
+    color: #333333;
+    background-color: darkred;
+    cursor: pointer;
+}
 .inquiry{
     margin-top: 6vh;
     font-size: 25px;
@@ -72,6 +90,15 @@ font-family: 'Acme', sans-serif;*/
     font-size: 20px;
 }
 
+.text-information{
+    text-transform: uppercase;
+}
+
+.total-live{
+    color: darkred;
+    font-size: 22px;
+}
+
 .clue{
     color: darkred;
 }
@@ -79,9 +106,6 @@ font-family: 'Acme', sans-serif;*/
     color: transparent;
 }
 
-.text-information{
-    text-transform: uppercase;
-}
 .btn-position{
     position: absolute;
     left: 50%;

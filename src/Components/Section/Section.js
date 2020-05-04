@@ -1,6 +1,7 @@
 import React from 'react';
 import './Section.css';
 import pool from '../../pool/questions';
+import Swal from 'sweetalert2'
 
 class Section extends React.Component {
     state = {
@@ -8,6 +9,8 @@ class Section extends React.Component {
         dataToPlayGame: {},
         hiddenClue: true,
         lettersFound: [],
+        clickedLetter:[],
+        totalLive: 10,
     };
 
     componentDidMount() {
@@ -16,25 +19,43 @@ class Section extends React.Component {
         })
     }
 
-    handleLetterClick = (e) => {
+    handleLetterClick = (e, clickedButtonIndex) => {
         const answerSingleLetters = this.state.dataToPlayGame.answer.toUpperCase().split('');
         let lettersFound = [...this.state.lettersFound];
+        let clickedLetter = [...this.state.clickedLetter];
+        let isLetterCorrect = false;
+        clickedLetter = [...clickedLetter, clickedButtonIndex];
         answerSingleLetters.forEach((answerSingleLetter, i) => {
-            if (answerSingleLetter === e.target.innerText) {
+            if (answerSingleLetter === e.target.innerText.toUpperCase()) {
                 lettersFound = [...lettersFound, i];
-            } else {}
+                isLetterCorrect = true;
+            }
         });
-
+        if(this.state.totalLive>0 && !isLetterCorrect){
+            this.setState({
+                totalLive: this.state.totalLive-1,
+            }, ()=>{
+                if(this.state.totalLive === 0){
+                    Swal.fire({
+                        title: 'GAME OVER!',
+                        showClass: {
+                            popup: 'animated fadeInDown faster'
+                        },
+                        hideClass: {
+                            popup: 'animated fadeOutUp faster'
+                        }
+                    })
+                }
+            });
+        }
         this.setState({
-            lettersFound
-        })
-
+            lettersFound,
+            clickedLetter
+        });
     };
     answerArea = () => {
         if (this.state.dataToPlayGame.answer) {
-            console.log(this.state.lettersFound)
             return this.state.dataToPlayGame.answer.split('').map((letter, index) => {
-                console.log(this.state.lettersFound.includes(index))
                 return <div key={index}
                             className={!this.state.lettersFound.includes(index) ? 'answerStyle hidden' : 'answerStyle'}> {letter}</div>
             });
@@ -59,6 +80,8 @@ class Section extends React.Component {
             dataToPlayGame: pool.questions[this.state.randomNumber],
             hiddenClue: true,
             lettersFound: [],
+            clickedLetter: [],
+            totalLive: 10,
         });
     };
 
@@ -67,7 +90,7 @@ class Section extends React.Component {
             'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z'];
         const btnLetters = alphabet.map((letter, index) => {
-            return <div key={index} className='letters' onClick={this.handleLetterClick}>
+            return <div key={index} className={this.state.clickedLetter.includes(index)? 'checked-letters': 'letters'} onClick={(e)=>this.handleLetterClick(e,index)}>
                 {letter}
             </div>
         });
@@ -82,7 +105,7 @@ class Section extends React.Component {
                     <div className='inquiry'>{`${this.state.dataToPlayGame.inquiry}`}</div>
                     <div className='answer-area'>{this.answerArea()}</div>
                     <div className='life-qty'>
-                        <p className='text-information'>You have /number/ lives</p>
+                        <p className='text-information'>You have <span className='total-live'> - {this.state.totalLive} - </span> lives</p>
                         {this.showClue()}
                         <div className='draw-information'>Draw</div>
                     </div>
