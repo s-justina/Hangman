@@ -33,3 +33,68 @@ div.header{
     text-transform: uppercase;
     text-align: center;
 }
+
+@media (orientation: portrait) and (min-width: 320px) and (max-width: 380px){
+    .header-container{
+        height: 35vh;
+    }
+
+    div.header{
+        height: 35vh;
+        background-size: contain;
+        opacity: .8;
+    }
+    .title{
+        top: 80%;
+        font-size: 40px;
+    }
+}
+@media (orientation: portrait) and (min-width: 381px){
+    .header-container{
+        height: 30vh;
+    }
+
+    div.header{
+        height: 30vh;
+        background-size: cover;
+    }
+
+    .title{
+        top: 80%;
+        font-size: 45px;
+    }
+}
+@media (orientation: portrait) and (min-width: 601px) and (max-width: 695px){
+    .header-container{
+        height: 60vh;
+    }
+
+    div.header{
+        height: 60vh;
+        background-size: cover;
+    }
+
+    .title{
+        top: 80%;
+        font-size: 70px;
+    }
+}
+@media (orientation: portrait) and (min-width: 760px){
+    .header-container{
+        height: 60vh;
+    }
+
+    div.header{
+        height: 60vh;
+        background-size: cover;
+    }
+
+    .title{
+        font-size: 90px;
+    }
+}
+@media (orientation: portrait) and (min-width: 1024px){
+    .title{
+        font-size: 100px;
+    }
+}
