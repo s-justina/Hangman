@@ -140,20 +140,7 @@ div.header{
         font-size: 80px;
     }
 }
-@media (orientation: landscape) and (min-width: 1301px) and (max-width:1440px){
-    .header-container{
-        height: 60vh;
-    }
-
-    div.header{
-        height: 60vh;
-    }
-    .title{
-        top: 85%;
-        font-size: 90px;
-    }
-}
-@media (orientation: landscape) and (min-width: 1441px) and (max-width:1600px){
+@media (orientation: landscape) and (min-width: 1301px) and (max-width:1600px){
     .header-container{
         height: 60vh;
     }
@@ -176,6 +163,6 @@ div.header{
     }
     .title{
         top: 85%;
-        font-size: 110px;
+        font-size: 100px;
     }
 }

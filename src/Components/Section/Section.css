@@ -168,3 +168,30 @@ font-family: 'Acme', sans-serif;*/
         font-size: 50px;
     }
 }
+
+/*@media landscape*/
+@media (orientation: landscape) and (max-width: 800px) {
+    .task{
+        font-size: 25px;
+    }
+}
+@media (orientation: landscape) and (min-width: 801px) and (max-width:1023px){
+    .task{
+        font-size: 30px;
+    }
+}
+@media (orientation: landscape) and (min-width: 1024px) and (max-width:1300px){
+    .task{
+        font-size: 35px;
+    }
+}
+@media (orientation: landscape) and (min-width: 1301px) and (max-width:1600px){
+    .task{
+        font-size: 45px;
+    }
+}
+@media (orientation: landscape) and (min-width: 1601px) and (max-width:1920px){
+    .task{
+        font-size: 55px;
+    }
+}
