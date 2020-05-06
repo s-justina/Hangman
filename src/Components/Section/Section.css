@@ -151,21 +151,73 @@ font-family: 'Acme', sans-serif;*/
     .task{
         font-size: 25px;
     }
+    .letters{
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .checked-letters{
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
 }
 @media (orientation: portrait) and (min-width: 381px){
     .task{
         padding: 5px;
         font-size: 30px;
     }
+    .letters{
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .checked-letters{
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+        line-height: 25px;
+    }
 }
 @media (orientation: portrait) and (min-width: 760px){
     .task{
         font-size: 45px;
     }
+    .letters{
+        height: 35px;
+        width: 35px;
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .checked-letters{
+        height: 35px;
+        width: 35px;
+        font-size: 35px;
+        line-height: 35px;
+    }
 }
 @media (orientation: portrait) and (min-width: 1024px){
     .task{
         font-size: 50px;
+    }
+    .letters{
+        height: 45px;
+        width: 45px;
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .checked-letters{
+        height: 45px;
+        width: 45px;
+        font-size: 45px;
+        line-height: 45px;
     }
 }
 
@@ -174,6 +226,7 @@ font-family: 'Acme', sans-serif;*/
     .task{
         font-size: 25px;
     }
+
 }
 @media (orientation: landscape) and (min-width: 801px) and (max-width:1023px){
     .task{
