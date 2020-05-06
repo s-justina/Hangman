@@ -14,7 +14,7 @@ font-family: 'Acme', sans-serif;*/
 .game-container{
     position: relative;
     margin:  auto;
-    min-height: 100vh;
+    min-height: 110vh;
     width: 90%;
     font-family: 'Acme', sans-serif;
     text-align: center;
@@ -157,12 +157,47 @@ font-family: 'Acme', sans-serif;*/
         font-size: 20px;
         line-height: 20px;
     }
-
     .checked-letters{
         height: 20px;
         width: 20px;
         font-size: 20px;
         line-height: 20px;
+    }
+    .inquiry{
+        font-size: 22px;
+    }
+    .answer-area{
+        margin-top: 5vh;
+        font-size: 25px;
+    }
+    .answerStyle{
+        height: 25px;
+        width: 25px;
+    }
+    .life-qty{
+        margin-top: 5vh;
+        font-size: 22px;
+    }
+    .total-live{
+        font-size: 24px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 20px;
+    }
+    .draw-information{
+        top: 5vh;
+    }
+    .btn-position{
+        top:86%
+    }
+    .btn{
+        margin: 0;
+        padding: 3px;
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
     }
 }
 @media (orientation: portrait) and (min-width: 381px){
@@ -176,12 +211,47 @@ font-family: 'Acme', sans-serif;*/
         font-size: 25px;
         line-height: 25px;
     }
-
     .checked-letters{
         height: 25px;
         width: 25px;
         font-size: 25px;
         line-height: 25px;
+    }
+    .inquiry{
+        font-size: 27px;
+    }
+    .answer-area{
+        margin-top: 7vh;
+        font-size: 30px;
+    }
+    .answerStyle{
+        height: 30px;
+        width: 30px;
+    }
+    .life-qty{
+        margin-top: 5vh;
+        font-size: 27px;
+    }
+    .total-live{
+        font-size: 29px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 25px;
+    }
+    .draw-information{
+        top:15px;
+    }
+    .btn-position{
+        top:83%;
+    }
+    .btn{
+        margin: 0;
+        padding: 6px;
+        height: 40px;
+        width: 140px;
+        font-size: 20px;
     }
 }
 @media (orientation: portrait) and (min-width: 760px){
@@ -194,12 +264,47 @@ font-family: 'Acme', sans-serif;*/
         font-size: 35px;
         line-height: 35px;
     }
-
     .checked-letters{
         height: 35px;
         width: 35px;
         font-size: 35px;
         line-height: 35px;
+    }
+    .inquiry{
+        font-size: 42px;
+    }
+    .answer-area{
+        margin-top: 8vh;
+        font-size: 45px;
+    }
+    .answerStyle{
+        height: 45px;
+        width: 45px;
+    }
+    .life-qty{
+        margin-top: 5vh;
+        font-size: 42px;
+    }
+    .total-live{
+        font-size: 44px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 40px;
+    }
+    .draw-information{
+        top:15px;
+    }
+    .btn-position{
+        top:80%;
+    }
+    .btn{
+        margin: 0;
+        padding: 16px;
+        height: 90px;
+        width: 290px;
+        font-size: 45px;
     }
 }
 @media (orientation: portrait) and (min-width: 1024px){
@@ -212,12 +317,47 @@ font-family: 'Acme', sans-serif;*/
         font-size: 45px;
         line-height: 45px;
     }
-
     .checked-letters{
         height: 45px;
         width: 45px;
         font-size: 45px;
         line-height: 45px;
+    }
+    .inquiry{
+        font-size: 47px;
+    }
+    .answer-area{
+        margin-top: 8vh;
+        font-size: 50px;
+    }
+    .answerStyle{
+        height: 50px;
+        width:50px;
+    }
+    .life-qty{
+        margin-top: 5vh;
+        font-size: 47px;
+    }
+    .total-live{
+        font-size: 49px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 45px;
+    }
+    .draw-information{
+        top:15px;
+    }
+    .btn-position{
+        top:75%;
+    }
+    .btn{
+        margin: 0;
+        padding: 20px;
+        height: 100px;
+        width: 320px;
+        font-size: 50px;
     }
 }
 
@@ -232,12 +372,34 @@ font-family: 'Acme', sans-serif;*/
         font-size: 20px;
         line-height: 20px;
     }
-
     .checked-letters{
         height: 20px;
         width: 20px;
         font-size: 20px;
         line-height: 20px;
+    }
+    .inquiry{
+        font-size: 22px;
+    }
+    .answer-area{
+        margin-top: 10vh;
+        font-size: 25px;
+    }
+    .answerStyle{
+        height: 25px;
+        width: 25px;
+    }
+    .life-qty{
+        margin-top: 10vh;
+        font-size: 22px;
+    }
+    .total-live{
+        font-size: 24px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 20px;
     }
 }
 @media (orientation: landscape) and (min-width: 801px) and (max-width:1023px){
@@ -250,12 +412,34 @@ font-family: 'Acme', sans-serif;*/
         font-size: 25px;
         line-height: 25px;
     }
-
     .checked-letters{
         height: 25px;
         width: 25px;
         font-size: 25px;
         line-height: 25px;
+    }
+    .inquiry{
+        font-size: 27px;
+    }
+    .answer-area{
+        margin-top: 10vh;
+        font-size: 30px;
+    }
+    .answerStyle{
+        height: 30px;
+        width: 30px;
+    }
+    .life-qty{
+        margin-top: 12vh;
+        font-size: 27px;
+    }
+    .total-live{
+        font-size: 29px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 25px;
     }
 }
 @media (orientation: landscape) and (min-width: 1024px) and (max-width:1300px){
@@ -268,12 +452,34 @@ font-family: 'Acme', sans-serif;*/
         font-size: 30px;
         line-height: 30px;
     }
-
     .checked-letters{
         height: 30px;
         width: 30px;
         font-size: 30px;
         line-height: 30px;
+    }
+    .inquiry{
+        font-size: 32px;
+    }
+    .answer-area{
+        margin-top: 10vh;
+        font-size: 35px;
+    }
+    .answerStyle{
+        height: 35px;
+        width: 35px;
+    }
+    .life-qty{
+        margin-top: 12vh;
+        font-size: 32px;
+    }
+    .total-live{
+        font-size: 34px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 30px;
     }
 }
 @media (orientation: landscape) and (min-width: 1301px) and (max-width:1600px){
@@ -286,12 +492,34 @@ font-family: 'Acme', sans-serif;*/
         font-size: 40px;
         line-height: 40px;
     }
-
     .checked-letters{
         height: 40px;
         width: 40px;
         font-size: 40px;
         line-height: 40px;
+    }
+    .inquiry{
+        font-size: 42px;
+    }
+    .answer-area{
+        margin-top: 10vh;
+        font-size: 45px;
+    }
+    .answerStyle{
+        height: 45px;
+        width: 45px;
+    }
+    .life-qty{
+        margin-top: 12vh;
+        font-size: 42px;
+    }
+    .total-live{
+        font-size: 44px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 40px;
     }
 }
 @media (orientation: landscape) and (min-width: 1601px) and (max-width:1920px){
@@ -304,11 +532,33 @@ font-family: 'Acme', sans-serif;*/
         font-size: 50px;
         line-height: 50px;
     }
-
     .checked-letters{
         height: 50px;
         width: 50px;
         font-size: 50px;
         line-height: 50px;
+    }
+    .inquiry{
+        font-size: 52px;
+    }
+    .answer-area{
+        margin-top: 10vh;
+        font-size: 55px;
+    }
+    .answerStyle{
+        height: 55px;
+        width: 55px;
+    }
+    .life-qty{
+        margin-top: 12vh;
+        font-size: 52px;
+    }
+    .total-live{
+        font-size: 54px;
+    }
+    .clue{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        font-size: 50px;
     }
 }
