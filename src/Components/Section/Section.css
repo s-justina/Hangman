@@ -226,25 +226,89 @@ font-family: 'Acme', sans-serif;*/
     .task{
         font-size: 25px;
     }
+    .letters{
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
 
+    .checked-letters{
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
 }
 @media (orientation: landscape) and (min-width: 801px) and (max-width:1023px){
     .task{
         font-size: 30px;
+    }
+    .letters{
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .checked-letters{
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+        line-height: 25px;
     }
 }
 @media (orientation: landscape) and (min-width: 1024px) and (max-width:1300px){
     .task{
         font-size: 35px;
     }
+    .letters{
+        height: 30px;
+        width: 30px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .checked-letters{
+        height: 30px;
+        width: 30px;
+        font-size: 30px;
+        line-height: 30px;
+    }
 }
 @media (orientation: landscape) and (min-width: 1301px) and (max-width:1600px){
     .task{
         font-size: 45px;
     }
+    .letters{
+        height: 40px;
+        width: 40px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .checked-letters{
+        height: 40px;
+        width: 40px;
+        font-size: 40px;
+        line-height: 40px;
+    }
 }
 @media (orientation: landscape) and (min-width: 1601px) and (max-width:1920px){
     .task{
         font-size: 55px;
+    }
+    .letters{
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .checked-letters{
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+        line-height: 50px;
     }
 }
