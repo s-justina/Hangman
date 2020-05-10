@@ -14,7 +14,6 @@ font-family: 'Acme', sans-serif;*/
 .game-container{
     position: relative;
     margin:  auto;
-    min-height: 110vh;
     width: 90%;
     font-family: 'Acme', sans-serif;
     text-align: center;
@@ -190,10 +189,11 @@ font-family: 'Acme', sans-serif;*/
         top: 5vh;
     }
     .btn-position{
-        top:86%
+        position: relative;
+        margin: 15vh auto;
     }
     .btn{
-        margin: 0;
+        margin: 5px;
         padding: 3px;
         height: 30px;
         width: 100px;
@@ -244,10 +244,11 @@ font-family: 'Acme', sans-serif;*/
         top:15px;
     }
     .btn-position{
-        top:83%;
+        position: relative;
+        margin: 15vh auto;
     }
     .btn{
-        margin: 0;
+        margin: 10px;
         padding: 6px;
         height: 40px;
         width: 140px;
@@ -297,14 +298,15 @@ font-family: 'Acme', sans-serif;*/
         top:15px;
     }
     .btn-position{
-        top:80%;
+        position: relative;
+        margin: 15vh auto;
     }
     .btn{
-        margin: 0;
-        padding: 16px;
-        height: 90px;
-        width: 290px;
-        font-size: 45px;
+        margin: 15px;
+        padding: 10px;
+        height: 70px;
+        width: 250px;
+        font-size: 35px;
     }
 }
 @media (orientation: portrait) and (min-width: 1024px){
@@ -350,14 +352,15 @@ font-family: 'Acme', sans-serif;*/
         top:15px;
     }
     .btn-position{
-        top:75%;
+        position: relative;
+        margin: 15vh auto;
     }
     .btn{
-        margin: 0;
-        padding: 20px;
-        height: 100px;
-        width: 320px;
-        font-size: 50px;
+        margin: 15px;
+        padding: 15px;
+        height: 90px;
+        width: 300px;
+        font-size: 40px;
     }
 }
 
@@ -401,6 +404,19 @@ font-family: 'Acme', sans-serif;*/
         margin-bottom: 2vh;
         font-size: 20px;
     }
+.draw-information{
+    margin-top: 5vh;
+}
+    .btn-position{
+        position: relative;
+        margin: 10vh auto;
+    }
+    .btn{
+        padding: 3px;
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
 }
 @media (orientation: landscape) and (min-width: 801px) and (max-width:1023px){
     .task{
@@ -440,6 +456,19 @@ font-family: 'Acme', sans-serif;*/
         margin-top: 1vh;
         margin-bottom: 2vh;
         font-size: 25px;
+    }
+    .draw-information{
+        margin-top: 5vh;
+    }
+    .btn-position{
+        position: relative;
+        margin: 15vh auto;
+    }
+    .btn{
+        padding: 6px;
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
     }
 }
 @media (orientation: landscape) and (min-width: 1024px) and (max-width:1300px){
@@ -481,6 +510,19 @@ font-family: 'Acme', sans-serif;*/
         margin-bottom: 2vh;
         font-size: 30px;
     }
+    .draw-information{
+        margin-top: 5vh;
+    }
+    .btn-position{
+        position: relative;
+        margin: 15vh auto;
+    }
+    .btn{
+        padding: 10px;
+        height: 50px;
+        width: 200px;
+        font-size: 25px;
+    }
 }
 @media (orientation: landscape) and (min-width: 1301px) and (max-width:1600px){
     .task{
@@ -521,6 +563,19 @@ font-family: 'Acme', sans-serif;*/
         margin-bottom: 2vh;
         font-size: 40px;
     }
+    .draw-information{
+        margin-top: 5vh;
+    }
+    .btn-position{
+        position: relative;
+        margin: 15vh auto;
+    }
+    .btn{
+        padding: 13px;
+        height: 70px;
+        width: 250px;
+        font-size: 35px;
+    }
 }
 @media (orientation: landscape) and (min-width: 1601px) and (max-width:1920px){
     .task{
@@ -560,5 +615,18 @@ font-family: 'Acme', sans-serif;*/
         margin-top: 1vh;
         margin-bottom: 2vh;
         font-size: 50px;
+    }
+    .draw-information{
+        margin-top: 5vh;
+    }
+    .btn-position{
+        position: relative;
+        margin: 15vh auto;
+    }
+    .btn{
+        padding: 16px;
+        height: 90px;
+        width: 300px;
+        font-size: 45px;
     }
 }
