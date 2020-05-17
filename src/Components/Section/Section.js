@@ -21,8 +21,8 @@ class Section extends React.Component {
         })
     };
 
-    handleLetterClick = (e, clickedButtonIndex, disabled) => {
-        if(disabled){
+    handleLetterClick = (e, clickedButtonIndex, buttonAlreadyClicked) => {
+        if(buttonAlreadyClicked || this.state.totalLive === 0){
             return
         }
         const answerSingleLetters = this.state.dataToPlayGame.answer.toUpperCase().split('');
