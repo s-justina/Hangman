@@ -22,7 +22,7 @@ class Section extends React.Component {
     };
 
     handleLetterClick = (e, clickedButtonIndex, buttonAlreadyClicked) => {
-        if(buttonAlreadyClicked || this.state.totalLive === 0){
+        if(buttonAlreadyClicked || this.state.totalLive === 0 || this.state.lettersFound.length === this.state.dataToPlayGame.answer.length){
             return
         }
         const answerSingleLetters = this.state.dataToPlayGame.answer.toUpperCase().split('');
@@ -60,9 +60,24 @@ class Section extends React.Component {
         this.setState({
             lettersFound,
             clickedLetter
+        }, ()=>{
+            if(this.state.lettersFound.length === this.state.dataToPlayGame.answer.length){
+                setTimeout(()=>{
+                    Swal.fire({
+                        title: 'YOU WIN!',
+                        showClass: {
+                            popup: 'animated fadeInDown faster'
+                        },
+                        hideClass: {
+                            popup: 'animated fadeOutUp faster'
+                        }
+                    })
+                }, 500)
+            }
         });
     };
     answerArea = () => {
+        console.log(this.state.lettersFound);
         if (this.state.dataToPlayGame.answer) {
             return this.state.dataToPlayGame.answer.split('').map((letter, index) => {
                 return <div key={index}

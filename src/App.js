@@ -17,4 +17,4 @@ function App() {
 
 export default App;
 
-// TODO: zablokować możliwość klikania literek po wygranej, you win po wygranej, zabarwienie dobrych literek na zielono, podmianka logo strony w karcie
+// TODO: zabarwienie dobrych literek na zielono, podmianka logo strony w karcie
