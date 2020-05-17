@@ -16,3 +16,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: stała szerokość między literkami hasła, zablokować możliwość klikania literek po game over i wygranej, you win po wygranej, zabarwienie dobrych literek na zielono, podmianka logo strony w karcie
