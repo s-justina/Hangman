@@ -17,4 +17,4 @@ function App() {
 
 export default App;
 
-// TODO: zabarwienie dobrych literek na zielono, podmianka logo strony w karcie
+// TODO: podmianka logo strony w karcie

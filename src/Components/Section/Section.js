@@ -77,7 +77,6 @@ class Section extends React.Component {
         });
     };
     answerArea = () => {
-        console.log(this.state.lettersFound);
         if (this.state.dataToPlayGame.answer) {
             return this.state.dataToPlayGame.answer.split('').map((letter, index) => {
                 return <div key={index}
@@ -109,14 +108,24 @@ class Section extends React.Component {
         });
         Draw.resetImage()
     };
+    lettersStyleType = (buttonAlreadyClicked, letter)=>{
+        const answerSingleLetters = this.state.dataToPlayGame.answer && this.state.dataToPlayGame.answer.toUpperCase().split('');
+        if(buttonAlreadyClicked && answerSingleLetters.includes(letter.toUpperCase())){
+            return 'good-letters'
+        } else if(buttonAlreadyClicked){
+            return 'checked-letters'
+        } else {
+            return 'letters'
+        }
 
+    };
     render() {
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
             'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z'];
         const btnLetters = alphabet.map((letter, index) => {
             const buttonAlreadyClicked = this.state.clickedLetter.includes(index);
-            return <div key={index} className={buttonAlreadyClicked ? 'checked-letters': 'letters'}
+            return <div key={index} className={this.lettersStyleType(buttonAlreadyClicked, letter)}
                         onClick={(e)=>this.handleLetterClick(e,index,buttonAlreadyClicked   )}>
                 {letter}
             </div>
