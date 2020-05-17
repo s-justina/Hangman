@@ -21,8 +21,8 @@ class Section extends React.Component {
         })
     };
 
-    handleLetterClick = (e, clickedButtonIndex, disabled) => {
-        if(disabled){
+    handleLetterClick = (e, clickedButtonIndex, buttonAlreadyClicked) => {
+        if(buttonAlreadyClicked || this.state.totalLive === 0 || this.state.lettersFound.length === this.state.dataToPlayGame.answer.length){
             return
         }
         const answerSingleLetters = this.state.dataToPlayGame.answer.toUpperCase().split('');
@@ -60,6 +60,20 @@ class Section extends React.Component {
         this.setState({
             lettersFound,
             clickedLetter
+        }, ()=>{
+            if(this.state.lettersFound.length === this.state.dataToPlayGame.answer.length){
+                setTimeout(()=>{
+                    Swal.fire({
+                        title: 'YOU WIN!',
+                        showClass: {
+                            popup: 'animated fadeInDown faster'
+                        },
+                        hideClass: {
+                            popup: 'animated fadeOutUp faster'
+                        }
+                    })
+                }, 500)
+            }
         });
     };
     answerArea = () => {
@@ -94,14 +108,24 @@ class Section extends React.Component {
         });
         Draw.resetImage()
     };
+    lettersStyleType = (buttonAlreadyClicked, letter)=>{
+        const answerSingleLetters = this.state.dataToPlayGame.answer && this.state.dataToPlayGame.answer.toUpperCase().split('');
+        if(buttonAlreadyClicked && answerSingleLetters.includes(letter.toUpperCase())){
+            return 'good-letters'
+        } else if(buttonAlreadyClicked){
+            return 'checked-letters'
+        } else {
+            return 'letters'
+        }
 
+    };
     render() {
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
             'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z'];
         const btnLetters = alphabet.map((letter, index) => {
             const buttonAlreadyClicked = this.state.clickedLetter.includes(index);
-            return <div key={index} className={buttonAlreadyClicked ? 'checked-letters': 'letters'}
+            return <div key={index} className={this.lettersStyleType(buttonAlreadyClicked, letter)}
                         onClick={(e)=>this.handleLetterClick(e,index,buttonAlreadyClicked   )}>
                 {letter}
             </div>

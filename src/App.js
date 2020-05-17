@@ -16,3 +16,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: podmianka logo strony w karcie
