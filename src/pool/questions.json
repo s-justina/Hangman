@@ -2,18 +2,88 @@
   "questions": [
     {
       "inquiry": "What fruit is it?",
-      "answer":"apple",
-      "clue": "It is green."
+      "answer": "apple",
+      "clue": "It has green color."
     },
     {
       "inquiry": "What fruit is it?",
-      "answer":"orange",
-      "clue": "It is orange."
+      "answer": "orange",
+      "clue": "It has orange color."
     },
     {
       "inquiry": "What fruit is it?",
-      "answer":"strawberry",
+      "answer": "strawberry",
       "clue": "It has seeds on its external surface."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "pineapple",
+      "clue": "It is an exotic fruit."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "banana",
+      "clue": "Monkeys love this fruit!."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "coconut",
+      "clue": "You can buy milk with its taste."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "raspberry",
+      "clue": "One of the berries."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "blueberry",
+      "clue": "One of the berries."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "kiwi",
+      "clue": "A bird is named just like this fruit."
+    },
+    {
+      "inquiry": "What vegetable is it?",
+      "answer": "tomato",
+      "clue": "It has red color."
+    },
+    {
+      "inquiry": "What vegetable is it?",
+      "answer": "cucumber",
+      "clue": "It has green color."
+    },
+    {
+      "inquiry": "What vegetable is it?",
+      "answer": "paprika",
+      "clue": "You can choose between yellow, green and red color of this vegetable."
+    },
+    {
+      "inquiry": "What vegetable is it?",
+      "answer": "onion",
+      "clue": "It makes you cry."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "avocado",
+      "clue": "It has large seed in it."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "lemon",
+      "clue": "It has yellow color."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "grape",
+      "clue": "Main ingredient of wine."
+    },
+    {
+      "inquiry": "What vegetable is it?",
+      "answer": "broccoli",
+      "clue": "Looks like bonsai tree."
     }
   ]
 }
