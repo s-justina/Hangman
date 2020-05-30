@@ -84,6 +84,11 @@
       "inquiry": "What vegetable is it?",
       "answer": "broccoli",
       "clue": "Looks like bonsai tree."
+    },
+    {
+      "inquiry": "What fruit is it?",
+      "answer": "plum",
+      "clue": "It is purple."
     }
   ]
 }
