@@ -616,7 +616,7 @@ font-family: 'Acme', sans-serif;*/
         font-size: 42px;
     }
     .answer-area{
-        margin-top: 10vh;
+        margin-top: 2vh;
         font-size: 45px;
     }
     .answerStyle{
@@ -624,7 +624,7 @@ font-family: 'Acme', sans-serif;*/
         width: 45px;
     }
     .life-qty{
-        margin-top: 12vh;
+        margin-top: 5vh;
         font-size: 42px;
     }
     .total-live{
@@ -636,7 +636,7 @@ font-family: 'Acme', sans-serif;*/
         font-size: 40px;
     }
     .draw-information{
-        margin-top: 5vh;
+        margin-top: 2vh;
     }
     .btn-position{
         position: relative;
@@ -675,7 +675,7 @@ font-family: 'Acme', sans-serif;*/
         font-size: 52px;
     }
     .answer-area{
-        margin-top: 10vh;
+        margin-top: 4vh;
         font-size: 55px;
     }
     .answerStyle{
@@ -683,7 +683,7 @@ font-family: 'Acme', sans-serif;*/
         width: 55px;
     }
     .life-qty{
-        margin-top: 12vh;
+        margin-top: 7vh;
         font-size: 52px;
     }
     .total-live{
@@ -695,7 +695,7 @@ font-family: 'Acme', sans-serif;*/
         font-size: 50px;
     }
     .draw-information{
-        margin-top: 5vh;
+        margin-top: 4vh;
     }
     .btn-position{
         position: relative;

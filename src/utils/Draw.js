@@ -1,6 +1,7 @@
 const resetImage = ()=>{
     const myStickman = document.getElementById("stickman");
     const context = myStickman.getContext('2d');
+    context.beginPath();
     context.clearRect(0, 0, 400, 400)
 };
 
